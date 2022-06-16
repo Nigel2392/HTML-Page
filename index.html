@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Home - ITExtra</title>
+	{% load static %}
+	{% load custom_tags %}
+	{% load mptt_tags %}
+	<link href="{% static 'media/favicon.png' %}" rel="shortcut icon" type="image/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'home/landing.css' %}">
+	<link rel="stylesheet" href="{% static 'home/landing_2.css' %}">
+	<link rel="stylesheet" href="{% static 'home/header.css'%}">
+	<link rel="stylesheet" href="{% static 'home/custommenus.css'%}">
+	<link rel="stylesheet" href="{% static 'home/custombuttons.css'%}">
+	<link rel="stylesheet" href="{% static 'home/background.css'%}">
+	<link href="{% static 'css/fa/all.css' %}" rel="stylesheet" type="text/css"/>
+	<link href="{% static 'css/bootstrap/bootstrap.css' %}" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="{% static 'itextra.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'fullpage/dep/fullPage.css' %}"/>
+	<script src="{% static 'js/jquery.js' %}" type="text/javascript"></script>
+</head>
+<body>
+
+
+<div id="fullpage">
+	<div class="section" id="section0">
+		<div class="customcontainer">
+			<div class="intro">
+				<div class="container-xl" style="z-index:99;">
+					<div class="row">
+						<div class="col-md-3 col-sm-12" style="margin-top:6%;">
+							<ul class="isonometric">
+
+								<li style="--i:6;"><a href="{% url 'projects:index' %}"><i class="fa-solid fa-house-user"></i> Home</a></li>
+								<li style="--i:5;"><a href="#CurriculumVitae"><i class="fa-regular fa-file"></i> Resume</a></li>
+								<li style="--i:4;"><a href="#Projects"><i class="fa-solid fa-align-left"></i> Categories</a></li>
+								<li style="--i:3;"><a href="#Projects/1"><i class="fa fa-list-check"></i> Projects</a></li>
+								<li style="--i:2;"><a href="#Contact"><i class="fa fa-globe"></i> Websites</a></li>
+								<li style="--i:1;"><a href="#Contact/1"><i class="fa-regular fa-address-card"></i> Contact</a></li>
+							</ul>
+						</div>
+						<div class="col-md-1 col-sm-12" style="padding:20px;">
+						</div>
+						<div class="col-md-8 col-sm-12">
+							<a class="" style="text-decoration:none" href="/">
+								<div class="stack noselect" style="--stacks: 3;">
+									<span style="--index: 0;"><i><ITHeader style="color:#9200ff;">IT</ITHeader><ITSubHeader style="font-size:0.7em;color:#545B94;">Extra</ITSubHeader></i></span>
+									<span style="--index: 1;"><i><ITHeader style="color:#9200ff;">IT</ITHeader><ITSubHeader style="font-size:0.7em;color:#545B94;">Extra</ITSubHeader></i></span>
+									<span style="--index: 2;"><i><ITHeader style="color:#9200ff;">IT</ITHeader><ITSubHeader style="font-size:0.7em;color:#545B94;">Extra</ITSubHeader></i></span>
+								</div>
+							</a>
+							<h2 style="color:white;">IT Extra is a website where you can find all the projects I have done, and some other general information about me and my past experiences.
+								I mainly program in Python, but also have an understanding of JavaScript, HTML, CSS, AutoHotKey and different kinds of database and administration software.</h2>
+								{% comment %} Ik programmeer merendeels in Python, maar heb ook kennis over JavaScript, HTML, CSS, AutoHotkey en verschillende database- en administratie software. {% endcomment %}
+							<hr style="color:#888888;margin-top:5%;margin-bottom:3%;">
+							<h2 style="color:#aaaaaa;"> I have been programming in python for <span id="purpletext">{{ datetime_python.months }}</span> months{% if datetime_python.days == 0 %}.{% else %}, and <span id="purpletext">{{ datetime_python.days }}</span> days.{% endif %}</h2>
+							<h2 style="color:#aaaaaa;"> I have also been programming Django websites for
+								<span id="purpletext">{{ datetime_django.months }}</span> months. 
+								<br>
+								{% if datetime_django.days != 0 %}
+									<span style="font-size:0.7em;" class="text-muted">
+										(and <span id="purpletext">{{datetime_django.days}}</span> days)
+									</span>
+								{% endif %}
+							</h2>
+							<hr style="color:#888888;margin-top:5%;">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<div class="container-xl">
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<ul class="isonometric">
+								<hr style="color:#999999;margin-top:5%;margin-bottom:3%;padding-top:4px;">
+								<a class="" style="text-decoration:none" href="#CurriculumVitae/1">
+									<div class="stack noselect" style="--stacks: 3;">
+										<span style="--index: 0;"><i><ITHeader style="color:#9200ff;">IT</ITHeader><ITSubHeader style="font-size:0.7em;color:#545B94;">Extra</ITSubHeader></i></span>
+										<span style="--index: 1;"><i><ITHeader style="color:#9200ff;">IT</ITHeader><ITSubHeader style="font-size:0.7em;color:#545B94;">Extra</ITSubHeader></i></span>
+										<span style="--index: 2;"><i><ITHeader style="color:#9200ff;">IT</ITHeader><ITSubHeader style="font-size:0.7em;color:#545B94;">Extra</ITSubHeader></i></span>
+									</div>
+									<h2 style="color:white;">
+										View my resume, or even download it!
+									</h2>
+								</a>
+								<hr style="color:#999999;margin-top:5%;margin-bottom:3%;padding-top:4px;">
+							</ul>
+						</div>
+						<div class="col-md-6 col-sm-12" style="display:flex;justify-content:center;align-items:center;">
+							<div style="display:flex;">
+								<a href="{% url 'projects:resume' %}" class="circularswap" style="z-index:0;text-decoration:none;">Download PDF</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="slide" id="slide2">
+			<div class="intro">
+				<div class="container-xl" style="background-color:rgba(255,255,255,0.9);margin-top:8%;">
+					<center style="font-size:1.2rem;">
+						<h1>Curriculum Vitae</h1>
+					</center>
+					<div class="row">
+						<div class="col-6">
+							<div>
+								<span style="margin-top:10px;">
+									<span style="font-weight:bold;">First name:</span> {{resume.first_name}}<br>
+									<span style="font-weight:bold;">Last name:</span> {{resume.last_name}}<br>
+									<span style="font-weight:bold;">E-Mail:</span> {{resume.email}}<br>
+									<span style="font-weight:bold;">Phone number:</span> {{resume.phone}}<br>
+									<span style="font-weight:bold;">Address:</span> {{resume.address}}<br>
+								</span>
+							</div>
+						</div>
+						<div class="col-6">
+							<a class="" style="text-decoration:none;text-align:end;" href="/">
+								<div class="stack noselect" style="--stacks: 3;">
+									<span style="--index: 0;"><i><ITHeader style="color:#9200ff;">IT</ITHeader><ITSubHeader style="font-size:0.7em;color:#545B94;">Extra</ITSubHeader></i></span>
+									<span style="--index: 1;"><i><ITHeader style="color:#9200ff;">IT</ITHeader><ITSubHeader style="font-size:0.7em;color:#545B94;">Extra</ITSubHeader></i></span>
+									<span style="--index: 2;"><i><ITHeader style="color:#9200ff;">IT</ITHeader><ITSubHeader style="font-size:0.7em;color:#545B94;">Extra</ITSubHeader></i></span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<hr style="margin-top:2%">
+					<div style="margin-top:2%;width:45%;">
+						<h2>Why a job in IT?</h2>
+						{{resume.description}}
+					</div>
+					<hr style="margin-top:2%">
+					<div class="row" style="margin-top:1%;margin-bottom:20%;">
+						<div class="col-7">
+							<h3>Job Experience:</h3>
+							{% for job in resume.all_jobs %}
+								<div class="row">
+									<div class="col-6">
+										<p><span style="font-weight:bold;">Company:</span> {{ job.company_name }}</p>
+										<p><span style="font-weight:bold;">Duty:</span> {{ job.job_title }}</p>
+										<p><span style="font-weight:bold;">Location:</span> {{ job.place }}</p>
+									</div>
+									<div class="col-6">
+										<p><span style="font-weight:bold;">Start date:</span> {{ job.end_date.day }}-{{ job.start_date.month }}-{{ job.start_date.year }}</p>
+										{% if job.end_date %}
+											<p><span style="font-weight:bold;">End date:</span> {{ job.end_date.day }}-{{ job.end_date.month }}-{{ job.end_date.year }}</p>
+										{% endif %}
+									</div>
+								</div>	
+								<hr>
+							{% endfor %}
+							<h3>Courses:</h3>
+							{% for education in resume.all_courses %}
+								<div class="row">
+									<div class="col-6">
+										<p><span style="font-weight:bold;">Course:</span> {{education.name}}</p>
+									</div>
+									<div class="col-6">
+										<p><span style="font-weight:bold;">Level of education:</span> {{education.experience}}</p>
+									</div>
+								</div>
+								<p><span style="font-weight:bold;">Start Date:</span> {{ education.end_date.day }}-{{ education.start_date.month }}-{{ education.start_date.year }}</p> </p>
+								<p><span style="font-weight:bold;">End Date:</span> {{ education.end_date.day }}-{{ education.end_date.month }}-{{ education.end_date.year }}</p> </p>
+								<p><span style="font-weight:bold;">Finished:</span>{% if education.finished %} Yes. {% else %} No. {%endif%}</p>
+									{% if education.description %}
+										<p><span style="font-weight:bold;">Description:</span> {{education.description}}</p>
+									{% endif %}
+								<hr>
+							{% endfor %}
+						</div>
+						<div class="col-2">
+							<h3>Languages:</h3>
+							{% for language in resume.all_languages %}
+								<p style="font-weight:bold;">{{language.name}}:</p>
+								<p>{{language.experience}}</p>
+							{% endfor %}
+						</div>
+						<div class="col-3">
+							<h3>Skills:</h3>
+							{% for skill in resume.all_skills %}
+								<p style="font-weight:bold;">{{skill.name}}:</p>
+								<p>{{skill.experience}}</p>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+	
+			</div>
+
+		</div>
+	</div>
+
+	<div class="section" id="section2">
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<div class="container" style="color:white;">
+					<center class="mb-4">
+						<h1>Look through all the different available categories!</h1>
+						<hr style="width:40%;height:4px;color:white;">
+					</center>
+					<div class="row">
+						<div class="col-12">
+							<div class="masonry">
+							
+								{% recursetree categories %}
+									{% if node.is_root_node %}
+										<div class="item brick">
+											<a href="{% url 'projects:category_detail' node.pk %}" style="text-decoration:none;" class=""><h3 class="purplehover" style="color:white;">{{ node.name }}</h3></a>
+											{% if not node.get_children %}
+												</div>
+											{% endif %}
+											
+									{% else %}
+										<a href="{% url 'projects:category_detail' node.pk %}" style="text-decoration:none;" class=""><h5 class="purplehover" style="color:#afafaf;">- {{ node.name }}</h5></a>
+									{% endif %}
+									{% if not node.is_leaf_node %}
+											{{ children }}
+										</div>
+									{% endif %}
+								{% endrecursetree %}
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	    <div class="slide" id="slide2">
+			<div class="intro">
+				<center style="padding-top:4%;margin-bottom:10%;">
+					<h1 class="mb-4" style="color:white;">Projects</h1>
+					{% if request.user.is_superuser %}
+						<a href="{% url 'projects:create_project_view' %}" class="btn btn-primary mb-4">Nieuw Project</a>
+					{% endif %}
+					<div class="project-card">
+						<table style="width:100%;">
+							<tr>
+								<th style="text-align:left;width:20%;color:white;">Project Name</th>
+								<th style="text-align:left;width:13%;color:white;">Category</th>
+								<th style="text-align:left;width:34%;color:white;">Progress</th>
+								<th style="text-align:left;width:33%;color:white;">Short description</th>
+							</tr>
+						</table>
+					</div>
+					{% for project in projects %}
+						<a href="{% url 'projects:project_detail' project.id %}" style="text-decoration:none;">
+							<div class="project-card">
+								<table style="width:100%;">
+									<tr>
+										<th style="text-align:left;width:20%;color:white;"></th>
+										<th style="text-align:left;width:13%;color:white;"></th>
+										<th style="text-align:left;width:34%;color:white;"></th>
+										<th style="text-align:left;width:33%;color:white;"></th>
+									</tr>
+									<tr>
+										<td style="color:white;">{{project.title}}</td>
+										<td style="color:white;">{{project.category}}</td>
+										<td style="color:white;">
+											<div class="my-progress-bar-container round-xlarge">
+												<div class="projectprogressbar round-xlarge" style="width:{{project.progress}}%"><div style="margin-left:4px;margin-top:3px;">{{project.progress}}%</div></div>
+											</div>
+										</td>
+										<td style="color:white;">{{project.content|striptags|truncatechars:30 }}</td>
+									</tr>
+								</table>
+								{% if request.user.is_superuser %}
+									<div style="display:flex;justify-content:flex-end;margin: 0 -5px;">
+										<a style="margin: 0 5px;" href="{% url 'projects:update_project_view' project.id %}"><i class="fa-solid fa-pen-to-square"></i></a>
+									</div>
+								{% endif %}
+							</div>
+						</a>
+					{% endfor %}
+				</center>
+
+			</div>
+
+		</div>
+	</div>
+	<div class="section" id="section3">
+	    <div class="slide" id="slide1">
+			<div class="intro">
+				<center style="padding-top:4%;">
+					<h1 style="color:white;">Other Websites</h1>
+					<div class="container-xl">
+						<div class="row">
+							<div class="col-3">
+								<div style="display:flex;">
+									<a class='circularswap'style="text-decoration:none;" href="https://store.itextra.nl" class="">Webshop</a>
+								</div>
+							</div>
+							<div class="col-3">
+								<div style="display:flex;">
+									<a class='circularswap'style="text-decoration:none;" href="https://polls.itextra.nl" class="">Polls</a>
+								</div>
+							</div>
+							<div class="col-3">
+								<div style="display:flex;">
+									<a class='circularswap'style="text-decoration:none;" href="https://notes.itextra.nl" class="">Noteblock</a>
+								</div>
+							</div>
+							<div class="col-3">
+								<div style="display:flex;">
+									<a class='circularswap'style="text-decoration:none;" href="https://anyict.nl" class="">AnyICT</a>
+								</div>
+							</div>
+						</div>
+				</center>
+			</div>
+
+		</div>
+	    <div class="slide" id="slide2">
+			<div class="intro">
+				<center>
+					<div class="container-xl " style="width:45%;padding:20px 35px;border:2px solid rgba(255,255,255,0.2);border-radius:20px;box-shadow: 10px 10px 20px #000000;">
+						<div id="form-div">
+							<h1 style="color:white;">Contact me!</h1>
+							<form id="contactform" action="{% url 'projects:contact' %}" method="post">
+								{% csrf_token %}
+								{{contactform.as_p}}
+								{{contactform.media}}
+								<button type="submit" class="fadein">Submit</button>
+							</form>
+						</div>
+						<div id="thank-div" style="font-size:2rem;display:none;">
+							<h1 style="color:white;">Thank you!</h1>
+							<p style="color:white;margin-bottom:20px;">Your message has been sent!</p>
+							<p style="color:white;margin-bottom:20px;font-size:1.2rem;">You will also receive an e-mail confirmation about this.<br>Cannot find it? Check your spam folder!</p>
+							<div class="checkdiv">
+								<i class="fa-solid fa-check-circle" style="color:green;font-size:144px;background-color:white;border-radius:50%;border: 2px solid white;"></i>
+							</div>
+						</div>
+					</div>
+				</center>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<script src="{% static 'js/fa/all.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/bootstrap/bootstrap.bundle.js' %}" type="text/javascript"></script>
+<script src="{% static 'itextra.js' %}" type="text/javascript"></script>
+<script type="text/javascript" src="{% static 'fullpage/dep/fullpage.js' %}"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#fullpage').fullpage({
+			anchors: ['Home', 'CurriculumVitae', 'Projects', 'Contact'],
+			sectionsColor: ['#444444', '#505050', '#555555', '#606060'],
+        	scrollOverflow: true,
+			loopTop: true,
+			loopBottom: true,
+			  menu: '#menu',
+			onLeave: function(index, nextIndex, direction){
+				if(deleteLog){
+					$('#callbacksDiv').html('');
+				}
+				if (nextIndex == 1){
+					$('#menu').css('display', 'none');
+				}else{
+					$('#menu').css('display', 'inline');
+				}
+				console.log("onLeave--" + "index: " + index + " nextIndex: " + nextIndex + " direction: " +  direction);
+			},
+			afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+				deleteLog = true;
+
+				console.log("afterSlideLoad--" + "anchorLink: " + anchorLink + " index: " + index + " slideAnchor: " + slideAnchor + " slideIndex: " + slideIndex);
+				console.log("----------------");
+				sendResponse(index,slideIndex)
+			},
+			afterLoad: function(anchorLink, index){
+				console.log("after Load  " + index);
+				if (index == 1){
+					$('#menu').css('display', 'none');
+				}else{
+					$('#menu').css('display', 'inline');
+				}
+				deleteLog = true;
+				console.log('===============');
+				console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index );
+				sendResponse(index,null)
+			},
+
+			onScrollOverflow: function(section, slide, position, direction){
+        	    var params = {
+        	        section: section,
+        	        slide: slide,
+        	        position: position,
+        	        direction: direction
+        	    };
+
+        	    console.log("--- onScrollOverflow ---");
+        	    console.log(params);
+        	}
+    	});
+
+		function sendResponse(index,pageindex){
+			$.ajax({
+				url: "{% url 'projects:update_session_url' %}",
+				type: "POST",
+				data: {
+					'index': index,
+					'slideIndex': pageindex,
+					'csrfmiddlewaretoken': getCookie('csrftoken')
+				},
+				success: function(data){
+					console.log(data);
+				}
+			})
+
+		}
+		$('#contactform').on('submit', function(e){
+			e.preventDefault();
+			$.ajax({
+				type: 'POST',
+				url: "{% url 'projects:contact' %}",
+				data: $(this).serialize(),
+				success: function(data){
+					$('#form-div').hide();
+					$('#thank-div').show();
+				}
+			});
+		});
+
+	});
+</script>
+
+</body>
+</html>
