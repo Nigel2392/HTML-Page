@@ -1,0 +1,43 @@
+.myflexbody{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.betterswipe-thanks{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 40px;
+    background-color: transparent;
+    border: 3px solid black;
+    padding: 30px 60px;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+.betterswipe-thanks:before{
+    content: 'Thank you!';
+    position: absolute;
+    color: black;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #9200ff;
+    transform: translateY(-100%);
+    transition: transform 1s ease-in-out 0.1s,color 5s ease-in-out 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.betterswipe-thanks:hover:before{
+    transform: translateX(0);
+}
+.betterswipe-thanks:hover{
+    color: white;
+}
+.halfwidth{
+    width:50%;
+}

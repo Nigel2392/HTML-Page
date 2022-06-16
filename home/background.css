@@ -1,0 +1,81 @@
+.customcontainer{
+    position: relative;
+    height: 100vh;
+    padding-top:5%;
+}
+.customcontainer .box{
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    width:10px;
+    height:10px;
+    border: 1px solid #9200ff;
+    animation: boxes 16s ease-in infinite;
+    transform: scale(0);
+    
+}
+.customcontainer .box:nth-child(2){
+    top: 40%;
+    left: 25%;
+    border-color: #666666;
+    animation-delay: 2s;
+}
+.customcontainer .box:nth-child(3){
+    top: 50%;
+    left: 75%;
+    animation-delay: 4s;
+}
+
+.customcontainer .box:nth-child(4){
+    top: 10%;
+    left: 90%;
+    border-color: #666666;
+    animation-delay: 5s;
+}
+.customcontainer .box:nth-child(5){
+    top: 85%;
+    left: 10%;
+    animation-delay: 6s;
+}
+
+.customcontainer .box:nth-child(6){
+    top: 10%;
+    left: 50%;
+    border-color: #666666;
+    animation-delay: 8s;
+}
+
+.customcontainer .box:nth-child(7){
+    top: 30%;
+    left: 60%;
+    animation-delay: 9s;
+}
+
+.customcontainer .box:nth-child(8){
+    top: 70%;
+    left: 90%;
+    border-color: #666666;
+    animation-delay: 10s;
+}
+
+.customcontainer .box:nth-child(9){
+    top: 10%;
+    left: 10%;
+    animation-delay: 11s;
+}
+
+@keyframes boxes{
+    0%{
+        transform: scale(20) rotate(480deg);
+        opacity: 0;
+    }
+
+    50%{
+        transform: scale(0) rotate(0deg);
+        opacity: 0.6;
+    }
+    100%{
+        transform: scale(20) rotate(480deg);
+        opacity: 0;
+    }
+}

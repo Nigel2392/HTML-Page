@@ -1,0 +1,140 @@
+/* body{ */
+    /* background-color: white; */
+    /* padding-bottom: 2%; */
+    /* border-top: 3px solid #9200ff; */
+    /* z-index: -5; */
+/* } */
+/* .cke_bottom { */
+    /* display:none !important; */
+/* } */
+/*  */
+/* .cke_1_bottom { */
+    /* display:none !important; */
+/* } */
+#cke_bottom_detail, .cke_bottom { display: none; }
+.headercolor{
+    background-color: white;
+    margin-bottom: 2%;
+}
+.widebase{
+    padding: 2%;
+
+    max-width: 80%;
+    background-color: transparent;
+    border-radius: 10px 10px 10px 10px;
+    z-index: -5;
+    box-shadow: 0 0px 0px 0px white, 0 -10px 0px 0px white, 3px 0 15px -4px rgba(0,0,0, 0.8), -3px 0 15px -4px rgba(0,0,0, 0.8);
+
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.pagination a {
+    margin: 0 0.5%;
+    color: white;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: black;
+    transition: background-color .3s, color 0.3s;
+}
+.pagination a.active {
+  background-color: #9200ff;
+  color: white;
+}
+.pagination a:hover:not(.active) {
+    background-color: #ddd; color: black;
+}
+
+.black{
+    background-color: black;
+    
+}
+.fullbase{
+    
+    max-width: 100%;
+    background-color: white;
+    border-radius: 40px 40px 40px 40px;
+}
+.customnav{
+    border-radius: 0px 0px 10px 10px;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #222222;
+    color: white;
+    text-align: center;
+}
+.padvert{
+    padding: 5px 0%;
+}
+.padtop{
+    margin-top: 2%;
+}
+.padbot{
+    padding-bottom: 2%;
+}
+.padtoplots{
+    margin-top: 10%;
+}
+.padbotlots{
+    margin-bottom: 10%;
+}
+.textleft{
+    text-align: left;
+    color: #999999;
+}
+.hovercall{
+    color: #999999;
+}
+.hovercall:hover{
+    color: #9200ff;
+}
+.hyperheader{
+    font-size: 1.5em;
+}
+.hideoverflow{
+    overflow: hidden;
+}
+#purpletext{
+    color: #9200ff;
+}
+.moveright{
+    text-align: right;
+}
+.right {
+    margin-left: auto; 
+    margin-right: 0;
+    
+ }
+
+.userimages img{
+    max-width: 100%; 
+    height: auto;
+}
+.myflexbox-categories{
+    height: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    overflow: hidden;
+}
+.myflexbox-pagination{
+    height: 5%;
+    padding: 0% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
